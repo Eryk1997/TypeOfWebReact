@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pierwszy komponent w React.js</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone/babel.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <div id="fun"></div>
+    <div id="sum"></div>
+    <script type="text/jsx">
+        ReactDOM.render(
+        <div>
+            <h1>Witaj, świecie!</h1>
+            <h2>Jestem ambitna/y, więc przerabiam kurs React.js!</h2>
+        </div>,
+        document.getElementById('app')
+        );
+
+        function MyComponent() {
+        return (
+        <div>
+            <h1>Witaj, świecie!</h1>
+            <h2>Jestem ambitna/y, więc przerabiam kurs React.js!</h2>
+        </div>
+        );
+        }
+
+        ReactDOM.render(
+        <MyComponent />,
+        document.getElementById('fun')
+        );
+
+        function Add(){
+            return (
+                <div>
+                    <h1>xxx</h1>
+                </div>
+            )
+        }
+
+         ReactDOM.render(
+         <Add  />,
+         document.getElementById('sum')
+         );
+  </script>
+</body>
+
+</html>
