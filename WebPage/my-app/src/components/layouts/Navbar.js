@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import logo from "../logo.svg";
+import logo from "../../logo.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-      <a className="navbar-brand" href="0">
+      <Link className="navbar-brand" href="0">
         <img src={logo} alt="logo" style={{ width: "35px" }} />
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -17,36 +18,34 @@ function Navbar() {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+        <span>
+          <i className="fas fa-bars" style={{ color: '#fff' }} />
+        </span>
       </button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav m-auto">
           <li className="nav-item active">
-            <a className="nav-link text-white text-uppercase ml-5" href="#">
+            <Link className="nav-link text-white text-uppercase ml-5" to="/">
               Home&nbsp;<i class="fas fa-home"></i>
               <span class="sr-only">(current)</span>
-            </a>
+            </Link>
           </li>
-          <li className="nav-item text-white text-uppercase">
-            <a
-              className="nav-link disabled text-white text-uppercase ml-5"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
+          <li className="nav-item active">
+            <Link
+              className="nav-link text-white text-uppercase ml-5"
+              to="/news"
             >
-              news
-            </a>
+              News
+            </Link>
           </li>
-          <li className="nav-item">
-            <a
-              className="nav-link text-white text-uppercase disabled ml-5"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
+          <li className="nav-item active">
+            <Link
+              className="nav-link text-white text-uppercase ml-5"
+              to="/contacts"
             >
-              contact us
-            </a>
+              Contacts
+            </Link>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
